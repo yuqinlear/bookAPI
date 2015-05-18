@@ -1,0 +1,27 @@
+/**
+ * Created by paul on 5/10/15.
+ */
+var mongoose = require('mongoose'),
+  Schema = mongoose.Schema;
+
+var bookModel = new Schema({
+  _id: {
+    type: Number
+  },
+  title: {
+    type: String
+  },
+  author: {
+    type: String
+  },
+  genre: {
+    type: String
+  },
+  read: {
+    type: Boolean,
+    default: false
+  }
+});
+
+module.exports = mongoose.model('Book', bookModel);
+
